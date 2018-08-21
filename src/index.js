@@ -26,12 +26,10 @@ class App extends Component {
                 selectedVideo: videos[0]            
             });
         });
-
     }
 
     render() {
         const videoSearch = _.debounce((term) => {this.videoSearch(term) }, 300);
-
         return (
             <div>
                 <SearchBar onSearchTermChange={videoSearch} />
